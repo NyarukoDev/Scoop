@@ -1,6 +1,6 @@
 
 # Scoop Language
-A small language I made for university. Uses stricter typing than python and is focussed on functions (referred to as SCOPEs). There are a couple of programs in the input folder of the project and more examples are welcome to be merged.
+A small language I made for university. Uses stricter typing than python and is focussed on functions (referred to as SCOPEs). There are a couple of programs in the input folder of the project and more examples are welcome to be merged. Setting up this project will require that you include an ANTLR 4.8 complete jar in your project dependencies.
 ## Variable Declarations
 Variables declarations and assignments are statically typed at assignment. This means that once a variable is assigned a value in its scope it cannot be assigned a value of a different type. Variables are declared in the scope in which the compiler is currently at. The ` := ` symbol is used for variable assignment and must be surrounded with a space on either side.
 ## Variable Operations
