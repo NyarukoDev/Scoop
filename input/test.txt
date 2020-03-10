@@ -1,0 +1,7 @@
+SCOPE entryPoint{} VOID
+    print {9}we
+DONE
+
+SCOPE we{b INTEGER} STRING --Variables must start with lowercase letter--
+    print b
+DONE

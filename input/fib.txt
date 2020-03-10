@@ -1,0 +1,16 @@
+SCOPE entryPoint{} VOID
+    print {9.0}fib
+DONE
+
+SCOPE fib{n DECIMAL} DECIMAL
+    IF n<2 THEN
+        RESULT n
+    OTHERWISE
+        l := n,1+
+        r := n,2+
+        l := {l}fib
+        r := {r}fib
+        l += r
+        RESULT l
+    DONE
+DONE

@@ -1,0 +1,57 @@
+SCOPE entryPoint{} VOID
+    scopedTest := 9
+	IF 2==2 THEN
+		a := 1.5
+		b := "hills make me go "
+		SAFE
+			a ^= 0.0 --Causes error in python--
+		ONFAIL
+			print "Type Exception Handled"
+		DONE
+		print a --a should still be 1.5--
+		a += 1.0
+		print a --a should be 2.5--
+		print a,2+ --prints 4.5--
+		print a --a should still be 2.5--
+
+        print {9}we
+		b += {9}we
+
+		print b
+        RESULT
+	DONE --End any scope--
+    pointless := 1.5
+    print "Should never print"
+DONE
+
+isGlobal := "test"
+
+--Produces the word we with the value b letter e s attached--
+SCOPE we{b INTEGER} STRING --Variables must start with lowercase letter--
+	word := "w"
+	e := "e"
+
+	b := 1
+
+    a := "lol"
+	IF a=={2}inlineIfRun THEN
+	    lol := "lol"
+    ELSE IF a=="lel" OR a!="kek" THEN
+        lol := "lel"
+    OTHERWISE
+        lol := "rand"
+    DONE
+
+    pre := 0.0
+
+	ITERATE pre,pre<10.0,pre := pre,1+ --bool expression or bounding int that generates a bounding expression--
+		word += e
+	DONE
+
+    word += isGlobal
+	RESULT word
+DONE
+
+SCOPE inlineIfRun{i INTEGER} STRING
+    RESULT "lol"
+DONE
