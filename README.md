@@ -1,8 +1,5 @@
-# Scoop Language Documentation
-## Compiler
-The compiler for Scoop works by building an intermediary model of the language code provided, and then parses this model into valid Python. If an entry point function is defined, it will insert a call to it automatically so that it will start with this function, much like the main method in Java.
-## Non-Tab-Delimited
-Unlike in Python, Scoop is not tab delimited. It is instead scoped by keywords as defined in the scoping section.
+# Scoop Language
+A small language I made for university. Uses stricter typing than python and is focussed on functions (referred to as SCOPEs).
 ## Variable Declarations
 Variables declarations and assignments are statically typed at assignment. This means that once a variable is assigned a value in its scope it cannot be assigned a value of a different type. Variables are declared in the scope in which the compiler is currently at. The ‘:=’ symbol is used for variable assignment and must be surrounded with a space on either side.
 ## Variable Operations
@@ -54,3 +51,7 @@ Recursion is possible in scoop by calling a RUN action on a method from within t
 The compiler detects type errors in assignments, calculations, operations, Boolean expressions, function calls, return statements etc. Other logical (non-type) errors are also handled properly within the compiler.
 ## Operators
 The operators supported are addition, subtraction, division, multiplication, modulo, and power.
+## Compiler
+The compiler for Scoop works by building an intermediary model of the language code provided, and then parses this model into valid Python. If an entry point function is defined, it will insert a call to it automatically so that it will start with this function, much like the main method in Java.
+## Non-Tab-Delimited
+Unlike in Python, Scoop is not tab delimited. It is instead scoped by keywords as defined in the scoping section.
