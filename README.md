@@ -1,3 +1,4 @@
+
 # Scoop Language
 A small language I made for university. Uses stricter typing than python and is focussed on functions (referred to as SCOPEs).
 ## Variable Declarations
@@ -7,23 +8,31 @@ Variables can be directly operated on with any of the valid operations in Scoop.
 e.g. thisVar ^= 2 brings thisVar to the power of two.
 ## Expressions
 Expressions in Scoop are defined in reverse polish notation. Non-operator tokens (excluding the first one) are preceded by a comma. Expressions are validity checked at compile-time. Below are some examples:
-•	a,2+
-•	a,v+,2*
-•	3,4,2*,1,5-,2,3^^/+
+
+    a,2+
+    a,v+,2*
+    3,4,2*,1,5-,2,3^^/+
+
 ## Loops
 Scoop supports both bounded and unbounded loops. A loop is keyworded by the word ‘ITERATE’, a space, a numeric variable assignment or an existing variable, a comma, a Boolean statement, a comma, and an optional assignment. Below are some examples:
-•	ITERATE a := 0,a<10,a := a,1+
-•	ITERATE a,a<10,a := a,1+
-•	ITERATE a,a<10
+
+    ITERATE a := 0,a<10,a := a,1+
+    ITERATE a,a<10,a := a,1+
+    ITERATE a,a<10
+
 ## Scoping
 Variables are accessible at proper scopes through the use of a stack of scopes that contain variable assignments.
 ## Functions
 Functions are implemented as a type of scope. The SCOPE keyword is used to move from a global to a function scope (it cannot be used while in the scope of another function). The SCOPE keyword should be followed by a space, a label for the scope that can be called by putting parameters inbetween braces and then putting the label of the function, a list of comma separated input parameters(a label and a non-void data type) surrounded by braces, and the return type. Below are some examples:
-•	SCOPE entryPoint{} VOID
-•	SCOPE we{b INTEGER,c STRING} STRING
+
+    SCOPE entryPoint{} VOID
+    SCOPE we{b INTEGER,c STRING} STRING
+
 And running examples for the above:
-•	{}entryPoint
-•	{a;”value”}we
+
+    {}entryPoint
+    {a;”value”}we
+
 ## Types
 The valid data types are as follows:
 •	Double
@@ -34,16 +43,20 @@ Strings are limited to letters, numbers, spaces, and periods.
 There is a return type known as VOID to mark methods that do not return anything.
 ## Comments
 Commenting is possible in Scoop. A comment is any text surrounded by pairs of hyphens. Comments are ignored at compile-time.
---  This is 1 example of a comment --
+
+    --  This is 1 example of a comment --
+
 ## Control Flow
 If statements, else if statements, and else (otherwise) statements are available in Scoop. They support complex Boolean logic as conditions.
-IF a=={2}someFunc THEN
-       a := "a"
-ELSE IF a=="g" OR a!=”c” THEN
-       a := "b"
-OTHERWISE
-       a := “c”
-DONE
+
+    IF a=={2}someFunc THEN
+           a := "a"
+    ELSE IF a=="g" OR a!=”c” THEN
+           a := "b"
+    OTHERWISE
+           a := “c”
+    DONE
+
 There are also SAFE blocks. Safe blocks will not terminate the program in the event of a runtime error but will instead perform the actions in the ONFAIL block.
 ## Recursion
 Recursion is possible in scoop by calling a RUN action on a method from within the method. The compiled python is limited to the python interpreter’s configured recursion limit (1000 calls by default usually).
