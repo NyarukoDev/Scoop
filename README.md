@@ -39,6 +39,7 @@ The valid data types are as follows:
 - INTEGER
 - BOOLEAN
 - STRING
+
 Strings are limited to letters, numbers, spaces, and periods.
 There is a return type known as `VOID` to mark methods that do not return anything.
 ## Comments
