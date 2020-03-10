@@ -2,7 +2,7 @@
 # Scoop Language
 A small language I made for university. Uses stricter typing than python and is focussed on functions (referred to as SCOPEs).
 ## Variable Declarations
-Variables declarations and assignments are statically typed at assignment. This means that once a variable is assigned a value in its scope it cannot be assigned a value of a different type. Variables are declared in the scope in which the compiler is currently at. The ‘:=’ symbol is used for variable assignment and must be surrounded with a space on either side.
+Variables declarations and assignments are statically typed at assignment. This means that once a variable is assigned a value in its scope it cannot be assigned a value of a different type. Variables are declared in the scope in which the compiler is currently at. The ` := ` symbol is used for variable assignment and must be surrounded with a space on either side.
 ## Variable Operations
 Variables can be directly operated on with any of the valid operations in Scoop. This is done by specifying the label of the variable to operate on and a = preceeded by the operator.
 e.g. thisVar ^= 2 brings thisVar to the power of two.
@@ -35,12 +35,12 @@ And running examples for the above:
 
 ## Types
 The valid data types are as follows:
-•	Double
-•	Integer
-•	Boolean
-•	String
+- DECIMAL
+- INTEGER
+- BOOLEAN
+- STRING
 Strings are limited to letters, numbers, spaces, and periods.
-There is a return type known as VOID to mark methods that do not return anything.
+There is a return type known as `VOID` to mark methods that do not return anything.
 ## Comments
 Commenting is possible in Scoop. A comment is any text surrounded by pairs of hyphens. Comments are ignored at compile-time.
 
